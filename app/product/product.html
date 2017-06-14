@@ -1,0 +1,94 @@
+<div class="header">
+    <img src="assets/logo.png" height="80px" >
+</div>
+<div class="menu-bar"> 
+    <div class="menu-item"><a href="">COOKWARE</a></div>
+    <div class="menu-item"><a href="">COOK's TOOL</a></div>
+    <div class="menu-item"><a href="">CUTLERY</a></div>
+    <div class="menu-item"><a href="">ELECTRICS</a></div>
+    <div class="menu-item"><a href="">BAKEWARE</a></div>
+    <div class="menu-item"><a href="">FOOD</a></div>
+    <div class="menu-item"><a href="">TABLETOP & BAR</a></div>
+    <div class="menu-item"><a href="">HOMEKEEPING</a></div>
+    <div class="menu-item"><a href="">OUTDOOR</a></div>
+    <div class="menu-item"><a href="">SALE</a></div>
+    <div class="menu-item menu-select"><a href="#!/product">WILLIAMS-SONOMA HOME</a></div>
+</div>
+<div class="menu-navigation"> 
+    <span class="menu-nav-span">Home</span>
+    <span class="menu-nav-span">></span>
+    <span class="menu-nav-span">Homekeeping</span>
+    <span class="menu-nav-span">></span>
+    <span class="menu-nav-span">Aprons</span>
+    <span class="menu-nav-span">></span>
+    <span class="menu-nav-span">Adult Aprons</span>
+    <span class="menu-nav-span">></span>
+    <span class="menu-nav-span menu-nav-select">{{model.selectedProduct.name}}</span>
+</div>
+
+<div class="product-page">
+    <div class="product-selection">
+        <div class="product-selected">
+            <img src="{{model.selectedProduct.largeProductPath}}" class="product-selected-img">
+        </div>
+        <div class="product-list">
+            <div class="product-items" ng-repeat="productList in model.productList" ng-click="selectProductItem(productList)">
+                <img id="{{productList.id}}" src="{{productList.smallProductPath}}" class="product-items-img">
+            </div>
+        </div>
+    </div>
+    <div class="product-description">
+        <div class="product-desc">
+            <h2>{{model.selectedProduct.name}}</h2>
+            <p>
+                A generously sized apron is a necessity in any kitchen, and ours will brighten yours with lively color. Sewn of thick cotton, it can be personalized or monogrammed with up to nine characters, all the same height, embroidered in your choice of color. An apron of this quality makes a welcome gift for any cook. 
+            </p>
+            <ul>
+                <li>Durable 100% cotton construction.</li>
+                <li>Adjustable neckband ensures a good fit.</li>
+                <li>Roomy front pockets hold small tools.</li>
+                <li>Machine wash.</li>
+            </ul>
+            <h2>$ {{model.price}}</h2>
+            <div class="quantity">
+                <input type="number" class="quantity-field" ng-model="model.quantity" ng-blur="updatePrice()"/>
+            </div>
+            <div class="add-to-cart" ng-click="updateCart()"> 
+                <img src="assets/button-add-to-cart.png">
+            </div>
+        </div>
+        <hr class="line-seperator">
+        <div class="product-accordian">
+           <div id="accordion">
+                <h3>EXPANDED</h3>
+                <div>
+                    <p>
+                    This section is expanded. This section can be collapsed by clicking on the "Expanded" text.
+                    This section is expanded. This section can be collapsed by clicking on the "Expanded" text.
+                    </p>
+                </div>
+                <h3>COLLAPSED</h3>
+                <div>
+                    <p>
+                    This section is expanded. This section can be collapsed by clicking on the "Expanded" text.
+                    This section is expanded. This section can be collapsed by clicking on the "Expanded" text.
+                    </p>
+                </div>
+                <h3>COLLAPSED</h3>
+                <div>
+                    <p>
+                    This section is expanded. This section can be collapsed by clicking on the "Expanded" text.
+                    This section is expanded. This section can be collapsed by clicking on the "Expanded" text.
+                    </p>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+pooja_garg14 my skype id-->
+
+
